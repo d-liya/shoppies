@@ -43,15 +43,10 @@ function App() {
 
   //Add data to the local storage when the tab closses.
   useEffect(() => {
-    console.log('Use')
     window.addEventListener('beforeunload',() => addToTheLocalStorage(nominatedList))
     return () => window.removeEventListener('beforeunload',() => addToTheLocalStorage(nominatedList));
   })
 
-  useEffect(() => {
-    window.addEventListener('visibilitychange',() => addToTheLocalStorage(nominatedList))
-    return () => window.removeEventListener('visibilitychange',() => addToTheLocalStorage(nominatedList));
-  })
 
   //Display search results after filtering it with the nominated list
   const sResults = useMemo(() => {
