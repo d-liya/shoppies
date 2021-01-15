@@ -43,8 +43,14 @@ function App() {
 
   //Add data to the local storage when the tab closses.
   useEffect(() => {
+    console.log('Use')
     window.addEventListener('beforeunload',() => addToTheLocalStorage(nominatedList))
     return () => window.removeEventListener('beforeunload',() => addToTheLocalStorage(nominatedList));
+  })
+
+  useEffect(() => {
+    window.addEventListener('visibilitychange',() => addToTheLocalStorage(nominatedList))
+    return () => window.removeEventListener('visibilitychange',() => addToTheLocalStorage(nominatedList));
   })
 
   //Display search results after filtering it with the nominated list
@@ -53,7 +59,7 @@ function App() {
      if(nominatedList && searchResult){
       results =  searchResult.map(el => {
          let movieObj = {...el, added:false}
-         nominatedList.map(nominated => {
+         nominatedList.forEach(nominated => {
           if(nominated.imdbID === el.imdbID){
             movieObj = {...movieObj, added:true}
           }

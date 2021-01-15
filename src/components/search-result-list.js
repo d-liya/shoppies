@@ -6,7 +6,7 @@ const SearchResultsList = ({results,onNominate,searchVal}) => (
         {searchVal ?<h4>Results for "{searchVal}"</h4> : <h4>Search Results</h4>}
         {Array.isArray(results) && results.map((el,i) => {
             return (
-                (i < 6) && <div className='search-result' key={el.imdbID}>
+                <div className='search-result' key={el.imdbID}>
                     <p>{el.Title} ({el.Year})</p>
                     <Button
                         bgColor={el.added ? '#3B737E' : ''}
