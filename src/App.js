@@ -25,7 +25,7 @@ function App() {
   //Fetch Data when the user types in the search field.
   useEffect(() => {
     const fetchData = () => {
-      fetch(`http://www.omdbapi.com/?apikey=19b84b80&type=movie&s=${searchVal}`)
+      fetch(`https://www.omdbapi.com/?apikey=19b84b80&type=movie&s=${searchVal}`)
       .then(res => res.json())
       .then(res => setSearchResult(res.Search))
       .catch(err => console.error(err))
