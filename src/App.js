@@ -75,7 +75,7 @@ function App() {
         let newArray = [...notifications]
         newArray.pop()
         setNotifications(newArray)
-    },2000)
+    },1200)
     return () => clearTimeout(timeOut)
   }
     
@@ -88,7 +88,10 @@ function App() {
 
   const onNominate = (movieObj) => {
     if(nominatedList && nominatedList.length === 5){
-      return addeNotification('You can only nominate five movies')
+      const message = 'You can only nominate five movies';
+      return (notifications[0] === message) 
+      ?  null
+      : addeNotification(message)
     }
     setNominatedList([...nominatedList, movieObj])
     addeNotification(`Added ${movieObj.Title} to your nominations`)
