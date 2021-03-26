@@ -1,21 +1,117 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
-*{
-  font-family: 'Space Mono', monospace;
-}
-.App{
+.App {
   background-color: #252525;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  color:#C4C8CA;
+  color: #c4c8ca;
 }
-.lists{
+.lists {
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+.btn {
+  cursor: "pointer";
+  background-color: #2ca1c0;
+  color: #c4c8ca;
+  border: 1px solid #2ca1c0;
+  padding: 4px 8px;
+  border-radius: 0.3rem;
+  margin-left: 30px;
+}
 
+.m-container {
+  margin: 10px 20px;
+  padding: 30px;
+  height: 380px;
+  width: 380px;
+  background-color: #353536;
+  border: 1px solid #353536;
+  border-radius: 0.2rem;
+  overflow-y: auto;
+}
+.m-container::-webkit-scrollbar-track {
+  background-color: #353536;
+}
+.m-container::-webkit-scrollbar {
+  width: 10px;
+  background-color: #353536;
+}
+.m-container::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #252525;
+}
+.m-container .search-result {
+  display: flex;
+  font-size: 0.8rem;
+  margin: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
 
+@media (max-width: 500px) {
+  .m-container {
+    width: 70%;
+  }
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  position: relative;
+  height: 35px;
+}
+.search input {
+  width: 100%;
+  outline: none;
+  background-color: #353536;
+  padding: 8px 20px;
+  color: #c4c8ca;
+  border: 1px solid #353536;
+  border-radius: 0.25rem;
+  text-indent: 20px;
+}
+#icon {
+  top: 10px;
+  left: 10px;
+  position: absolute;
+  opacity: 0.5;
+}
+@media (max-width: 500px) {
+  .search {
+    width: 70%;
+  }
+}
+
+.n-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.n-container li {
+  background-color: #353536;
+  width: 250px;
+  margin: 5px;
+  padding: 20px;
+  font-size: 0.8rem;
+  border-radius: 0.5rem;
+}
+.n-container .header {
+  display: flex;
+  justify-content: flex-end;
+}
+#close {
+  background: none;
+  border: none;
+  color: #c4c8ca;
+  font-weight: bolder;
+  cursor: pointer;
+  outline: none;
+}
