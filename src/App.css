@@ -64,6 +64,7 @@
   width: 400px;
   position: relative;
   height: 35px;
+  margin-top:10px;
 }
 .search input {
   width: 100%;
