@@ -16,7 +16,7 @@ const getFromTheLocalStorage = (key) => {
 };
 
 const fetchData = async (value) => {
-  return fetch(`https://www.omdbapi.com/?apikey=19b84b80&type=movie&s=${value}`)
+  return fetch(`https://www.omdbapi.com/?apikey=${YOUR_API_KEY}&type=movie&s=${value}`)
     .then((res) => res.json())
     .then((res) => res.Search)
     .catch((err) => console.error(err));
