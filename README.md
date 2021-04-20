@@ -285,7 +285,9 @@ This is a simple method to update the above state onChange using the user input.
 This completes our SearchBar implementation.
 
 Before we move to the next component we’ll create a few helper methods for our conveniences.
-As the name suggests all this method is responsible for is fetching data from the above api to get the movies related to the user's input. Note you will need an api key, you can get one by visiting this website and replace ‘YOUR API KEY’ with your key.
+As the name suggests all this method is responsible for is fetching data from the above api to get the movies related to the user's input. Note you will need an api key, you can get one by visiting <a className="external-link" href="http://www.omdbapi.com/">
+this website</a>
+ and replace ‘YOUR API KEY’ with your key.
 ```
 const fetchData = async (value) => {
   return fetch(`https://www.omdbapi.com/?apikey=${YOUR_API_KEY}&type=movie&s=${value}`)
