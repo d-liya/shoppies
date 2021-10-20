@@ -1,5 +1,5 @@
 
-# Building The Shoppies
+# Building The Shoppies (Blog Post Shared with Codeacademy)
 
 This app was created as a part of shopify summer intern challenge. In
 this post I will explain how to create a web app using React, React
